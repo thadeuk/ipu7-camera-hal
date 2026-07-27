@@ -720,7 +720,7 @@ StaticGraphStatus GraphResolutionConfigurator::updateRunKernelUpScaler(StaticGra
     upscalerActualInputWidth = GRA_ROUND_DOWN(upscalerActualInputWidth, stepW);
     upscalerActualInputHeight = (upscalerActualInputWidth / stepW) * stepH;
 
-    if ((static_cast<double>(upscalerActualOutputWidth) / upscalerActualInputWidth) > max_upscaling)
+    if ((upscalerActualOutputWidth / upscalerActualInputWidth) > max_upscaling)
     {
         // Perform the max possible up scaling, downscaler will adjust itself
         upscalerActualInputWidth = upscalerActualOutputWidth / max_upscaling;

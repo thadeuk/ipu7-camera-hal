@@ -167,7 +167,7 @@ int Intel3AParameter::setSensorInfo(ia_aiq_exposure_sensor_descriptor descriptor
     return OK;
 }
 
-int Intel3AParameter::updateParameter(aiq_parameter_t param) {
+int Intel3AParameter::updateParameter(const aiq_parameter_t& param) {
     updateAeParameter(param);
     updateAwbParameter(param);
     updateAfParameter(param);
